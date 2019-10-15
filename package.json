@@ -10,9 +10,12 @@
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
+    "babelify": "^10.0.0",
+    "del": "^5.1.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-csso": "^3.0.1",
     "gulp-sass": "^4.0.2",
     "morgan": "^1.9.1",
@@ -22,7 +25,7 @@
     "socket.io": "^2.3.0"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node src/server.js",
+    "dev:server": "nodemon --exec babel-node src/server.js --ignore assets/ --ignore src/static",
     "dev:assets": "gulp"
   },
   "devDependencies": {
