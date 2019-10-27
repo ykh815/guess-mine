@@ -8,8 +8,8 @@ const LOGGED_OUT = "loggedOut";
 const nickname = localStorage.getItem(NICKNAME);
 
 const logIn = nickname => {
-  const socket = io("/");
-  socket.emit("setNickname", { nickname });
+  window.socket = io("/");
+  window.socket.emit(window.captureEvents.set?Nickname, { nickname });
 };
 
 if (nickname === null) {
